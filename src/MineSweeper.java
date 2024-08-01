@@ -137,7 +137,7 @@ public class MineSweeper {
         } while (!(a >= 0 && a < this.rowNumber && b >= 0 && b < this.colNumber));
     }
 
-    void Checker2() {
+    void CheckerIfCoordinateIsSelected() {
         if (!this.listDisplay[this.a][this.b].equals(" - ")) {
             System.out.println("Bu koordinat daha önce seçildi, başka bir koordinat girin");
         }
@@ -156,7 +156,7 @@ public class MineSweeper {
         }
         while (isWin()) {
             Input();
-            Checker2();
+            CheckerIfCoordinateIsSelected();
             if (!Checker()) {
                 System.out.println("Kaybettiniz!");
                 break;
